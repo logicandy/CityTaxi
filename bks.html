@@ -1,0 +1,287 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>CITY TAXI</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		  <script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+				});
+			});
+		</script>
+		
+		<style>
+			.content{
+				background:url(images/taxi-glass.jpg);
+				
+			}
+			.row{
+				width:100%;
+				
+			}
+			.row .col{
+				float:left;
+				box-sizing:border-box;
+				margin:0 !important;
+				padding:0 15px 15px 15px;
+				
+			}
+			
+			.row .col.s50{
+				width:50% !important;
+			}
+			
+			.row .col.s100{
+				width:100% !important;
+
+			}
+			
+			.center-align{
+				text-align:center;
+			}
+			
+			.contact-form .input-field input{
+				background-color:rgba(0,0,0,0.4);
+				border:none !important;
+				color:white !important;
+				border-radius:3px;
+				font-size:1.3rem !important;
+				font-weight:bold;
+				width:100% !important;
+				height:2rem;
+			}
+			
+			
+			
+			.contact-form input[type=date],.contact-form input[type=time]{
+				-webkit-appearance: none !important;
+				background-color: rgba(0,0,0,0.4) !important;
+				color: #fff !important;
+				font-size: 1.3rem;
+				font-weight: bold;
+				border: none;
+				height:43px;
+		}
+			
+			.contact-form input::-webkit-input-placeholder {
+				color:white;
+			}
+			
+			
+			select{
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				width:100% !important;
+				background: url(images\dd.png) 96% / 15% no-repeat rgba(0,0,0,0.4);
+				border:none;
+				padding:0 10px;
+				height: 3rem;
+				border-radius: 5px;
+				color: white;
+				font-size: 1.3rem;
+				font-weight: bold;
+				
+			}
+			
+			.heading{
+				font-size:2.5rem;
+				font-weight:bold;
+				color:#FFC809;
+				text-align:center;
+				padding:15px 0;
+			}
+		</style>
+<script>
+		function validateForm()
+	{
+    var x = document.forms["bks"]["userName"].value;
+    if (x == null || x == "")
+	{
+        alert("Name must be filled out");
+        return false;
+    }
+	var y = document.forms["bks"]["userEmail"].value;
+    if (y == null || y == "")
+	{
+        alert("Email must be filled out");
+        return false;
+    }
+	var a = document.forms["bks"]["userPhone"].value;
+    if (a == null || a == "")
+	{
+        alert("Phone No. must be filled out");
+        return false;
+    }
+	var b = document.forms["bks"]["from"].value;
+    if (b == null || b == "")
+	{
+        alert("From must be filled out");
+        return false;
+    }
+	var c = document.forms["bks"]["to"].value;
+    if (c == null || c == "")
+	{
+        alert("To feed  must be filled out");
+        return false;
+    }
+	
+	var e = document.forms["bks"]["adult"].value;
+    if (e == null || e == "")
+	{
+        alert("To feed  must be filled out");
+        return false;
+    }
+	
+	var f = document.forms["bks"]["children"].value;
+    if (f == null || f == "")
+	{
+        alert("To feed  must be filled out");
+        return false;
+    }
+	
+	var g = document.forms["bks"]["date"].value;
+    if (g == null || g == "")
+	{
+        alert("To feed  must be filled out");
+        return false;
+    }
+	
+	var t = document.forms["bks"]["time"].value;
+    if (t == null || t == "")
+	{
+        alert("To feed  must be filled out");
+        return false;
+    }
+	}
+	
+</script>
+	</head>
+	<body bgcolor="black">
+		<!---strat-wrap----->
+		
+			<!---strat-header----->
+			<div class="header"  id="top">
+				<div class="wrap">
+					<!---start-logo---->
+					<div class="logo">
+						<a href="index.html"><img src="images/logo1.png" title="logo" /></a>
+					</div>
+					<!---End-logo---->
+					<!---start-top-nav---->
+					<div class="top-nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							<li class="active"><a href="bks.html">Booking Form</a></li>
+							<li><a href="whatwe.php">What Customers Say!</a></li>
+							<li><a href="contact.html">Contact Us</a></li>
+							<li><a href="login.html">Log Out</a></li>
+							<div class="clear"> </div>
+						</ul>
+					</div>
+					<div class="clear"> </div>
+					<!---End-top-nav---->
+				</div>
+			</div>
+			<!---End-header----->
+		 <!---start-contnet---->
+		 <div class="content">
+		 	<!---start-contact-->
+		 	
+		 		<div class="wrap">
+				<div class="section group">				
+					
+				
+				  <div class="contact-form">
+				  	<h3 class="heading"><font face="Arial">BOOKING FORM</h3>
+					    <form method="post" class="row" style="solid" action="bks.php" name="bks" onsubmit="return validateForm()">
+							<div class="col s50">
+								<div class="input-field">
+									<span><input name="userName" type="text" class="textbox" placeholder="NAME"></span>
+								</div>
+								<div class="input-field">
+									<span><input name="userEmail" type="text" class="textbox" placeholder="E-MAIL:example@demo.com"></span>
+								</div>
+								<div class="input-field">
+									<span><input name="userPhone" type="text" class="textbox" placeholder="MOBILE NO."></span>
+								</div>
+								<div class="input-field">
+									<span><input name="from" type="text" class="textbox" placeholder="FROM"></span>
+								</div>
+								<div class="input-field">
+									<span><input name="to" type="text" class="textbox" placeholder="TO"></span>
+								</div>
+							</div>
+							<div class="col s50">
+								<div>
+									<div  class="col s100">
+										<select name="adult">
+											<option>ADULTS</option>
+											<option>0</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+										</select>
+									</div>
+									<div  class="col s100">
+										<select name="children">
+											<option>CHILDREN</option>
+											<option>0</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+										</select>
+									</div>
+								</div>
+								<div class="col s100">
+									<span><label><font color="yellow" size="5" style="Century Gothic">SELECT DATE</font></label></span>
+									<span><input name="date" type="date" class="textbox" placeholder="date and time"></span>
+								</div>
+								<div class="col s100">
+									<span><label><font color="yellow" size="5">SELECT TIME</font></label></span>
+									<span><input name="time" type="time" class="textbox" placeholder="date and time"></span>
+								</div>
+							</div>
+						    <div class="col s100 center-align" style="padding:10px 15px;">
+						   		<span><input type="submit" value="Submit"></span>
+							</div>
+					    </form>
+
+				    </div>
+  								
+			 
+			</div>
+			</div>
+		 	<!---End-contact----->
+		 	<div class="bottom-grids">
+		 		<div class="wrap">
+		 		<div class="social-links">
+		 			<ul>
+		 				
+		 				<li><a href="https://plus.google.com/u/0/116128541967483190068/posts"><span>VISIT US ON GOOGLE+</span></a></li>
+		 			
+		 			</ul>
+		 		</div>
+		 		<div class="mobile-no">
+		 			 <span>NO. :+91 123 456789</span>
+		 		</div>
+		 		
+		 		<div class="copy-right">
+		 			<p><span>Design by</span> <a href="https://plus.google.com/+dishankkaji_ironman/posts/p/pub"><span>DSK Group</span></a></p>
+		 		</div>
+		 		<div class="top-to-page">
+						<a href="#top" class="scroll"> </a>
+						<div class="clear"> </div>
+					</div>
+		 	</div>
+		 	</div>
+		 </div>
+		 <!---End-contnet---->
+		</div>
+		<!---End-wrap----->
+	</body>
+</html>
